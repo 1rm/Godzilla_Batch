@@ -2,7 +2,6 @@ import configparser
 import sqlite3
 import time
 import uuid
-from sys import argv
 
 # 当前时间
 currentTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
@@ -101,6 +100,7 @@ def dataDbRead(Db: ...):
     if group != "":
         shellDict["group"] = group
         cursor.execute(f"INSERT INTO shellGroup VALUES ('{group}');")
+        Db.commit()
 
 
 # db数据写入
