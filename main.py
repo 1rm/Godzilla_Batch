@@ -137,8 +137,6 @@ if __name__ == '__main__':
         shellDict.update(u)
         dataDbWrite(coon, shellDict)
 
-
-
     # 关闭连接
     coon.close()
     print("[*] 写入完成")
